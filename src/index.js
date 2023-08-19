@@ -46,6 +46,7 @@ function createSelectMarkup(arr) {
 
 function selectCatBreed(e) {
   const breedId = e.target.value;
+  refs.div.innerHTML = '';
   fetchCatByBreed(breedId)
     .then(catData => {
       refs.loader.classList.remove('is-hidden');
